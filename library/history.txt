@@ -1,0 +1,151 @@
+    1  exit()
+    2  exit
+    3  ls
+    4  touch lesson5_path2.py
+    5  ls
+    6  nano lesson5_path2.py 
+    7  ls
+    8  ды
+    9  ls
+   10  nano lesson5_path2.py 
+   11  python3 -m venv lesson5
+   12  python3 -m venv venv
+   13  ls
+   14  systemctl postgresql status 
+   15  systemctl status postgresql
+   16  systemctl stop postgresql
+   17  systemctl status postgresql
+   18  ls
+   19  cd /home/django/
+   20  ls
+   21  touch venv.txt
+   22  ls
+   23  touch venv.txt
+   24  ls
+   25  nano venv.txt 
+   26  ls
+   27  systemctl stop postgresql
+   28  systemctl status postgresql
+   29  systemctl restart postgresql
+   30  systemctl status postgresql
+   31  ssh-keygen 
+   32  cat /root/.ssh/id_rsa.pub
+   33  apt update
+   34  apt install nginx
+   35  apt install python3-venv
+   36  apt install git
+   37  apt install postgresql postresql-contrib
+   38  apt install postgresql postgresql-contrib
+   39  nano /etc/postgresql/12/main/pg_hba.conf 
+   40  systemctl restart postgresql
+   41  systemctl status postgresql
+   42  useradd -g www-data -m django 
+   43  cd /home/django/
+   44  ls
+   45  python3 -m venv venv
+   46  source venv/bin/activate
+   47  git clone git@github.com:Nikolos123/1208-1184-1214.git
+   48  ls
+   49  rm  venv.txt 
+   50  ls
+   51  cat venv.txt 
+   52  ls
+   53  rm  venv.txt 
+   54  ls
+   55  cd 1208-1184-1214/
+   56  ls
+   57  cd geekshop/
+   58  ls
+   59  cd
+   60  git branch 
+   61  cd ..
+   62  ls
+   63  cd /home/django/1208-1184-1214/
+   64  git branch 
+   65  git checkout part2_lesson5
+   66  ls
+   67  cd geekshop/
+   68  ls
+   69  cd ..
+   70  ls
+   71  git branch 
+   72  git checkout part_2lesson5 
+   73  git branch 
+   74  ls
+   75  cd geekshop/
+   76  ls
+   77  pip3 install -r requirements.txt 
+   78  pip install wheel
+   79  pip3 install -r requirements.txt 
+   80  pip3 install gunicorn
+   81  psql -U postgres
+   82  ls
+   83  psql -Upostgres
+   84  ls
+   85  cd ..
+   86  cd
+   87  ls
+   88  psql -U postgres
+   89  systemctl restart postgresql
+   90  nano /etc/postgresql/12/main/pg_hba.conf 
+   91  systemctl status postgresql
+   92  systemctl restart postgresql
+   93  psql -U postgres
+   94  udo netstat -nlp | grep 5432
+   95  netstat -nlp | grep 5432
+   96  ps -ef | grep postgres
+   97  restart
+   98  sudo reboot
+   99  systemctl status postgresql
+  100  psql -U postgres
+  101  ls
+  102  cd ..
+  103  ls
+  104  cd home/django/
+  105  ls
+  106  cd 1208-1184-1214/geekshop/
+  107  ls
+  108  migrate
+  109  python3 manage.py migrate
+  110  source ../../venv/bin/activate
+  111  python3 manage.py migrate
+  112  python3 manage.py fill_db
+  113  python3 manage.py runserver 0.0.0.0:8000
+  114  nano /etc/systemd/system/gunicorn.service
+  115  systemctl enable gunicorn
+  116  systemctl start gunicorn
+  117  systemctl status gunicorn
+  118  
+  119  ls
+  120  chown -R django /home/django/
+  121  systemctl restart gunicorn
+  122  systemctl status gunicorn
+  123  
+  124  systemctl status gunicorn
+  125  nano /etc/nginx/sites-available/geekshop
+  126  ln -s /etc/nginx/sites-available/geekshop /etc/nginx/sites-enabled/
+  127  rm /etc/nginx/sites-enabled/default 
+  128  systemctl restart gunicorn
+  129  systemctl restart nginx
+  130  systemctl status nginx
+  131  systemctl status gunicorn
+  132  nginx -t
+  133  tail -f /var/log/nginx/error.log 
+  134  systemctl status gunicorn
+  135  
+  136  nginx -t
+  137  systemctl status gunicorn
+  138  systemctl restart nginx
+  139  nano /etc/nginx/sites-available/geekshop
+  140  systemctl restart gunicorn
+  141  ls
+  142  nano /etc/systemd/system/gunicorn.service
+  143  systemctl restart gunicorn
+  144  systemctl enable gunicorn
+  145  systemctl geekshop gunicorn
+  146  systemctl restart gunicorn
+  147  systemctl status gunicorn
+  148  nano /etc/nginx/sites-available/geekshop
+  149  nano /etc/systemd/system/gunicorn.service
+  150  history
+  151  history > /tmp/history.txt
