@@ -10,8 +10,8 @@ class AuthorModelSerializer(HyperlinkedModelSerializer):
         # exclude = ['first_name']
 
 
-class BookModelSerializer(ModelSerializer):
-    author = AuthorModelSerializer(many=True)
+class BookSerializer(ModelSerializer):
+    #author = AuthorModelSerializer(many=True)
     class Meta:
         model = Book
         fields = '__all__'
