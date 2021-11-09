@@ -1,7 +1,7 @@
 from rest_framework.serializers import ModelSerializer,HyperlinkedModelSerializer,StringRelatedField
 from .models import Authors,Book,Biography
 
-class AuthorModelSerializer(HyperlinkedModelSerializer):
+class AuthorModelSerializer(ModelSerializer):
 
     class Meta:
         model = Authors
@@ -11,10 +11,13 @@ class AuthorModelSerializer(HyperlinkedModelSerializer):
 
 
 class BookSerializer(ModelSerializer):
-    #author = AuthorModelSerializer(many=True)
+    # author = AuthorModelSerializer(many=True)
     class Meta:
         model = Book
         fields = '__all__'
+
+    # def create(self, validated_data):
+    #     pass
 
 class BiographyModelSerializer(ModelSerializer):
 
