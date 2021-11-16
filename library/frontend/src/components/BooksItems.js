@@ -9,7 +9,13 @@ const BooksItem = ({book,authors}) =>{
                 {book.name}
             </td >
             <td  className={'col'}>
-                {book.author.map((authorId) => {return authors.find((author) => author.id == authorId ).last_name})}
+
+                {book.author.map((authorId) => {
+                    let author = authors.find((author) => author.id == authorId )
+                    if(author){
+                        return author.last_name
+                    }
+                })}
             </td>
         </tr>
     )
