@@ -10,6 +10,15 @@ class AuthorModelViewSet(ModelViewSet):
     serializer_class = AuthorModelSerializer
     # permission_classes =  [AllowAny]
 
+    # def create(self, request, *args, **kwargs):
+    #
+    # def destroy(self, request, *args, **kwargs):
+    #
+    # def list(self, request, *args, **kwargs):
+    #
+    # def update(self, request, *args, **kwargs):
+
+
 class BiographyModelViewSet(ModelViewSet):
     # renderer_classes = [JSONRenderer,BrowsableAPIRenderer]
     queryset = Biography.objects.all()
