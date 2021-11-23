@@ -80,6 +80,7 @@ class App extends React.Component {
 
     get_headers(){
         let headers ={
+            'Accept':'application/json; version=v2',
             'Content-Type':'application/json'
         }
         if(this.is_auth()){

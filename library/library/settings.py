@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -46,6 +48,8 @@ INSTALLED_APPS = [
     'authors',
     'corsheaders',
     'django_filters',
+    'users',
+    'drf_yasg'
 ]
 
 MIDDLEWARE = [
@@ -149,7 +153,11 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
-    ]
+    ],
+    # 'DEFAULT_VERSIONING_CLASS':'rest_framework.versioning.URLPathVersioning'
+# 'DEFAULT_VERSIONING_CLASS':'rest_framework.versioning.NamespaceVersioning'
+# 'DEFAULT_VERSIONING_CLASS':'rest_framework.versioning.QueryParameterVersioning'
+'DEFAULT_VERSIONING_CLASS':'rest_framework.versioning.AcceptHeaderVersioning'
 
     # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     # 'PAGE_SIZE': 2,
@@ -157,3 +165,4 @@ REST_FRAMEWORK = {
 }
 if DEBUG:
     REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'].append('rest_framework.renderers.BrowsableAPIRenderer')
+# from rest_framework.versioning import AcceptHeaderVersioning

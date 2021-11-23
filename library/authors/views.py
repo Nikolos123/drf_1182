@@ -2,12 +2,18 @@ from rest_framework.permissions import AllowAny,DjangoModelPermissionsOrAnonRead
 from rest_framework.renderers import JSONRenderer,BrowsableAPIRenderer
 from rest_framework.viewsets import ModelViewSet
 from .models import Authors,Biography,Book
-from .serializers import AuthorModelSerializer,BiographyModelSerializer,BookSerializer
+from .serializers import AuthorModelSerializer, BiographyModelSerializer, BookSerializer, AuthorModelSerializerBase
+
 
 class AuthorModelViewSet(ModelViewSet):
     # renderer_classes = [JSONRenderer, BrowsableAPIRenderer]
     queryset = Authors.objects.all()
-    serializer_class = AuthorModelSerializer
+    # serializer_class = AuthorModelSerializer
+
+    def get_serializer_class(self):
+        if self.request.version == 'v2':
+            return AuthorModelSerializerBase
+        return AuthorModelSerializer
     # permission_classes =  [AllowAny]
 
     # def create(self, request, *args, **kwargs):

@@ -9,6 +9,12 @@ class AuthorModelSerializer(ModelSerializer):
         # fields = ['first_name']
         # exclude = ['first_name']
 
+class AuthorModelSerializerBase(ModelSerializer):
+
+    class Meta:
+        model = Authors
+        fields = ('first_name',)
+
 
 class BookSerializer(ModelSerializer):
     # author = AuthorModelSerializer(many=True)
