@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_filters',
     'users',
-    'drf_yasg'
+    'drf_yasg',
+    'graphene_django'
 ]
 
 MIDDLEWARE = [
@@ -146,7 +147,7 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PERMISSION_CLASSES':[
         # 'rest_framework.permissions.IsAuthenticated',
-    'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+    # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
     ],
 
     'DEFAULT_AUTHENTICATION_CLASSES' :[
@@ -166,3 +167,7 @@ REST_FRAMEWORK = {
 if DEBUG:
     REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'].append('rest_framework.renderers.BrowsableAPIRenderer')
 # from rest_framework.versioning import AcceptHeaderVersioning
+
+GRAPHENE = {
+    "SCHEMA": "library.schema.schema"
+}
