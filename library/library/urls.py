@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from django.views.decorators.csrf import csrf_exempt
+from django.views.generic import TemplateView
 from graphene_django.views import GraphQLView
 from rest_framework import permissions
 from rest_framework.authtoken.views import obtain_auth_token
@@ -52,6 +53,7 @@ urlpatterns = [
     path('api-auth/',include('rest_framework.urls')),
     path('api/', include(router.urls)),
     path('api-token-auth/',obtain_auth_token),
+    path('',TemplateView.as_view(template_name='index.html')),
     # path('swagger/',schema_view.with_ui('swagger')),
     # path('swagger<str:format>/',schema_view.without_ui()),
     # path('redoc/',schema_view.with_ui('redoc')),

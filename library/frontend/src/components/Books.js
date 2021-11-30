@@ -1,25 +1,57 @@
 import React from "react";
-import BooksItem from "./BooksItems";
+import {Link} from "react-router-dom";
+//
 
 
-
-
-const  BooksList = ({books,authors}) =>{
+const BooksItem = ({book, authors, deleteBook}) => {
     return (
-        <table className={'container'}>
-            <th className="col">
-                Id
-            </th >
+        <tr>
+            <td className={'col'}>
+                {book.id}
+            </td>
+            <td className={'col'}>
+                {book.name}
+            </td>
+            <td className={'col'}>
 
-            <th className="col">
-                Name
-            </th>
+                {book.author.map((authorId) => {
+                    let author = authors.find((author) => author.id == authorId)
+                    if (author) {
+                        return author.last_name
+                    }
+                })}
+            </td>
+            <td>
+                <button onClick={() => deleteBook(book.id)} type='button'>Delete</button>
+            </td>
+        </tr>
+    )
+}
 
-            <th className="col">
-                Author
-            </th>
-            {books.map((book)=> <BooksItem book={book} authors={authors}/>)}
-        </table>
+
+const BooksList = ({books, authors, deleteBook}) => {
+    return (
+        <div>
+            <table className={'container'}>
+                <th className="col">
+                    Id
+                </th>
+
+                <th className="col">
+                    Name
+                </th>
+
+                <th className="col">
+                    Author
+                </th>
+                <th className="col">
+                    Delete
+                </th>
+                {books.map((book) => <BooksItem book={book} authors={authors} deleteBook={deleteBook}/>)}
+            </table>
+
+            <Link to='/books/create'>Create</Link>
+        </div>
     )
 
 }
